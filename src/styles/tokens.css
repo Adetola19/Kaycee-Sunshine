@@ -1,0 +1,77 @@
+/* Coach Kaycee Sunshine — generated from design/tokens.json by scripts/build-tokens.mjs. Do not edit by hand. */
+:root {
+  color-scheme: light dark;
+  --ivory: #f7f4ed;
+  --surface-raised: #ffffff;
+  --sage-wash: #e6ebe2;
+  --line: #ddd7cb;
+  --line-strong: #858a81;
+  --ink: #252824;
+  --ink-muted: #5a5f57;
+  --forest: #24483b;
+  --on-forest: #f7f4ed;
+  --forest-ground: #24483b;
+  --charcoal-ground: #252824;
+  --slate-ground: #34505f;
+  --on-ground: #f7f4ed;
+  --champagne: #d6c6a2;
+  --champagne-ink: #7a6437;
+  --sage: #a8b6a2;
+  --on-sage: #252824;
+  --slate: #34505f;
+  --error: #9c3b2e;
+  --focus: #24483b;
+  --scrim: rgba(21, 24, 22, 0.72);
+  --shadow-float: 0 18px 48px -24px rgba(37, 40, 36, 0.35);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 176px;
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-pill: 999px;
+  --container-max: 1320px;
+  --measure-text: 66ch;
+  --measure-lede: 34em;
+  --nav-height: 88px;
+  --nav-height-scrolled: 64px;
+  --duration-fast: 180ms;
+  --duration-base: 420ms;
+  --duration-reveal: 900ms;
+  --duration-stagger: 90ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ivory: #151816;
+    --surface-raised: #1e221f;
+    --sage-wash: #253029;
+    --line: #333933;
+    --line-strong: #6e746c;
+    --ink: #ece8de;
+    --ink-muted: #a7aca3;
+    --forest: #8db8a4;
+    --on-forest: #151816;
+    --forest-ground: #1c3a2f;
+    --charcoal-ground: #0e100f;
+    --slate-ground: #2b3b45;
+    --on-ground: #ece8de;
+    --champagne-ink: #d6c6a2;
+    --on-sage: #151816;
+    --slate: #98b3c2;
+    --error: #e59a8a;
+    --focus: #d6c6a2;
+    --scrim: rgba(14, 16, 15, 0.82);
+    --shadow-float: 0 18px 48px -20px rgba(0, 0, 0, 0.6);
+  }
+}
