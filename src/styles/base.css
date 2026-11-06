@@ -165,15 +165,16 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 0; }
     transition-delay: calc(var(--i, 0) * var(--duration-stagger));
   }
   .js [data-reveal="fade"] { transform: none; }
-  .js [data-reveal="mask"] {
-    opacity: 1;
-    transform: none;
+  /* Mask clips the children, never the observed element itself: a clipped
+     target reads as zero-visible to IntersectionObserver and would never reveal. */
+  .js [data-reveal="mask"] { opacity: 1; transform: none; transition: none; }
+  .js [data-reveal="mask"] > * {
     clip-path: inset(100% 0 0 0);
     transition: clip-path var(--duration-reveal) var(--ease-out);
     transition-delay: calc(var(--i, 0) * var(--duration-stagger));
   }
   .js [data-reveal].is-revealed { opacity: 1; transform: none; }
-  .js [data-reveal="mask"].is-revealed { clip-path: inset(0 0 0 0); }
+  .js [data-reveal="mask"].is-revealed > * { clip-path: inset(0 0 0 0); }
 }
 
 /* Hero load sequence — completes within 1.6s. */

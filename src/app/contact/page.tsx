@@ -10,7 +10,7 @@ import { PageHero } from "@/components/sections/PageHero";
 export const metadata: Metadata = pageMetadata({
   title: "Contact & Enquiries",
   description:
-    "Enquire about leadership coaching, speaking, interpretation, language learning, media or partnerships with Kaycee Sunshine.",
+    "Enquire about leadership coaching with BGYCC, public speaking, Speak French Fast, media or partnerships with Kaycee Sunshine.",
   path: "/contact",
 });
 

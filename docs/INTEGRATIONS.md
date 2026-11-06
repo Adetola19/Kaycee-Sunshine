@@ -26,14 +26,14 @@ CRM record; a CRM's intake endpoint; or a small serverless function using an ema
 ```json
 {
   "type": "speaking",
-  "typeLabel": "Speaking or conference",
+  "typeLabel": "Public speaking",
   "fields": { "name": "…", "email": "…", "organisation": "…", "location": "…", "format": "Keynote", "message": "…" },
   "submittedAt": "2026-10-28T14:08:38.411Z",
   "source": "website-contact-form"
 }
 ```
 
-`type` is one of `coaching`, `speaking`, `interpretation`, `language`, `partnership`,
+`type` is one of `coaching` (BGYCC), `speaking`, `language` (Speak French Fast), `partnership`,
 `general`. The fields for each type are defined once in `src/lib/enquiry.ts`.
 
 ### Responses

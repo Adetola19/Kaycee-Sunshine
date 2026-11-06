@@ -1,7 +1,7 @@
 # Kaycee Sunshine
 
-Personal brand website for **Coach Kaycee Sunshine** — global leadership coach, international
-interpreter and language educator.
+Personal brand website for **Coach Kaycee Sunshine** — global leadership coach, public speaker,
+language educator and founder of BGYCC School of Leadership.
 
 Built with Next.js 16 (App Router), React 19 and TypeScript, styled with plain CSS driven by the
 approved design tokens. Design direction: _stunning without shouting_ (see `design/BRAND.md`).
@@ -50,25 +50,30 @@ scripts/build-tokens.mjs  Regenerates src/styles/tokens.css from design/tokens.j
 src/app/                Routes (one folder per page), sitemap, robots, OG image, API route
 src/components/
   layout/               Header + mobile menu, footer, social links
-  sections/             Page hero, section header, pillars, article cards, accordion, closing invitation…
+  sections/             Page hero, section header, pillars, accordion, social channels, closing invitation…
   media/                Photo/placeholder, gallery + lightbox, video card + modal
   motion/               Reveal, RevealObserver, Parallax
   forms/                Enquiry form
   ui/                   Button, TextLink, Icon, Pending marker
-src/content/            Site facts, links, nav, photos, videos, articles — edit content here
+src/content/            Site facts, links, nav, photos, videos — edit content here
 src/lib/                Enquiry model + validation (shared client/server), SEO helper
 src/styles/             tokens.css (generated), base, components, sections
 docs/                   Audit, owner inputs, integrations
 ```
 
+## Pages
+
+`/` · `/about` · `/bgycc-school-of-leadership` (menu: **BGYCC**, includes coaching) · `/speaking`
+(menu: **Public Speaking**) · `/speak-french-fast` (menu: **SFF**, includes language education) ·
+`/media` · `/contact` · `/privacy`. `/coaching` and `/language` redirect to the merged pages.
+
 ## Editing content
 
-- **Photos:** put files in `public/images/` and set `image` on the matching entry in
-  `src/content/media.ts`. The labelled placeholder is replaced automatically.
+- **Photos:** put files in `public/images/` and set `image` (with `alt`, dimensions and an optional
+  `position` for cropping) on the matching entry in `src/content/media.ts`. The labelled placeholder
+  is replaced automatically.
 - **Videos:** add `{ id, title, duration, kind }` to `videos` in `src/content/media.ts` using the
-  exact YouTube title. Cards appear on Home, Speaking, Speak French Fast and Media by kind.
-- **Articles:** add to `articles` in `src/content/articles.ts` — either `body` blocks (published at
-  `/insights/<slug>`) or an `externalUrl` (e.g. a LinkedIn article).
+  exact YouTube title. Cards appear on Home, Public Speaking, SFF and Media by kind.
 - **Unconfirmed facts** are marked in pages with `<Pending>…</Pending>`, which renders a visible
   `[OWNER TO CONFIRM: …]`. Replace the marker with verified text. The full list is in
   `docs/OWNER-INPUTS.md`.

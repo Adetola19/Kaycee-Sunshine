@@ -25,7 +25,7 @@ type PageHeroProps = {
   actions?: React.ReactNode;
   visual?: VisualData;
   tone?: Tone;
-  /** Parent page for the breadcrumb, e.g. { label: "Language", href: "/language" }. */
+  /** Parent page for the breadcrumb, e.g. { label: "About", href: "/about" }. */
   parent?: { label: string; href: string };
   children?: React.ReactNode;
 };

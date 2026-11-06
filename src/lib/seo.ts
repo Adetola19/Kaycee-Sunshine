@@ -15,7 +15,7 @@ export function siteUrl(): URL | undefined {
 type PageMeta = {
   title: string;
   description: string;
-  /** Route path, e.g. "/coaching". */
+  /** Route path, e.g. "/speaking". */
   path: string;
   noindex?: boolean;
 };

@@ -172,7 +172,7 @@ export function EnquiryForm({ initialType }: { initialType?: EnquiryType }) {
 
       {type && (
         <fieldset key={type} className="fields-swap">
-          <legend className="t-h3">About your {enquiryTypeDefs[type].label.toLowerCase()} enquiry</legend>
+          <legend className="t-h3">About your enquiry · {enquiryTypeDefs[type].label}</legend>
           <div className="kc-form__row kc-form__row--2">
             {fields.map((f) => (
               <div key={f.name} style={f.half ? undefined : { gridColumn: "1 / -1" }}>

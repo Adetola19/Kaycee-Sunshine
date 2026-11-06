@@ -41,12 +41,12 @@ main:focus { outline: none; }
   .mission__body { grid-column: 4 / span 8; }
 }
 
-/* ---------- BGYCC band ---------- */
-.bgycc-band { align-items: center; }
-.bgycc-band__media { max-width: 520px; }
+/* ---------- Meet Kaycee band ---------- */
+.meet-band { align-items: center; }
+.meet-band__media { max-width: 440px; }
 @media (min-width: 1024px) {
-  .bgycc-band__media { grid-column: 1 / span 5; }
-  .bgycc-band__text { grid-column: 7 / span 6; }
+  .meet-band__media { grid-column: 2 / span 4; }
+  .meet-band__text { grid-column: 7 / span 6; }
 }
 
 /* ---------- Follow / social channels ---------- */
@@ -147,17 +147,6 @@ main:focus { outline: none; }
   .contact__form { grid-column: 1 / span 8; }
   .contact__aside { grid-column: 10 / span 3; padding-top: var(--space-2); }
 }
-
-/* ---------- Insights & articles ---------- */
-.insights-section { padding-top: var(--space-6); }
-.insights-archive { padding-top: 0; }
-.article__head { padding-bottom: var(--space-7); }
-.article__narrow { max-width: calc(780px + 2 * var(--gutter)); display: grid; gap: var(--space-5); }
-.article__narrow.prose { display: block; }
-.article__image img { width: 100%; }
-.pull-quote { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: var(--space-6) 0; margin-block: var(--space-7); }
-.pull-quote p { color: var(--forest); }
-.pull-quote cite { display: block; margin-top: var(--space-3); font-style: normal; }
 
 /* ---------- Legal ---------- */
 .legal h2 { margin-top: var(--space-8); }

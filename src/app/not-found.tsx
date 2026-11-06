@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 };
 
 const suggestions = [
-  { label: "Leadership & Coaching", href: "/coaching" },
-  { label: "Speaking", href: "/speaking" },
-  { label: "Interpretation", href: "/interpretation" },
-  { label: "Language Education", href: "/language" },
-  { label: "Insights", href: "/insights" },
+  { label: "BGYCC School of Leadership", href: "/bgycc-school-of-leadership" },
+  { label: "Public Speaking", href: "/speaking" },
+  { label: "SFF · Speak French Fast", href: "/speak-french-fast" },
+  { label: "About Kaycee", href: "/about" },
+  { label: "Videos & media", href: "/media" },
 ];
 
 export default function NotFound() {

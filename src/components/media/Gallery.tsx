@@ -79,7 +79,8 @@ export function Gallery({ items, label }: GalleryProps) {
                       alt={item.image.alt}
                       width={item.image.width}
                       height={item.image.height}
-                      sizes="(min-width: 1024px) 33vw, 82vw"
+                      sizes="(min-width: 1024px) 50vw, 82vw"
+                      style={item.image.position ? { objectPosition: item.image.position } : undefined}
                     />
                   </button>
                 ) : (

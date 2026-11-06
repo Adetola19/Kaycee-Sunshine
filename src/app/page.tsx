@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { site, socialList, socials } from "@/content/site";
 import { portraits, speakingGallery, videos } from "@/content/media";
-import { sortedArticles } from "@/content/articles";
 import { pageMetadata } from "@/lib/seo";
 import { ButtonLink } from "@/components/ui/Button";
 import { TextLink } from "@/components/ui/TextLink";
@@ -13,13 +12,12 @@ import { Parallax } from "@/components/motion/Parallax";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { PillarStack } from "@/components/sections/Pillars";
-import { ArticleFeature } from "@/components/sections/ArticleCards";
 import { SocialChannels } from "@/components/sections/SocialChannels";
 import { ClosingInvitation } from "@/components/sections/ClosingInvitation";
 
 export const metadata: Metadata = {
   ...pageMetadata({ title: "Home", description: site.description, path: "/" }),
-  title: { absolute: `${site.fullName} · Global Leadership Coach, Interpreter and Language Educator` },
+  title: { absolute: `${site.fullName} · Global Leadership Coach, Public Speaker and Language Educator` },
 };
 
 export default function HomePage() {
@@ -81,8 +79,8 @@ export default function HomePage() {
           </div>
           <Reveal index={2} className="intro__body stack">
             <p className="t-lede">
-              Coaching sharpens how a leader thinks. Interpretation carries meaning faithfully between languages.
-              Language education gives people the confidence to be understood.
+              Coaching sharpens how a leader thinks. Public speaking gives ideas a voice. Language education gives
+              people the confidence to be understood.
             </p>
             <p>
               Kaycee brings the three together in service of one mission: to develop leaders and equip them for work that
@@ -125,7 +123,7 @@ export default function HomePage() {
           <SectionHeader
             id="stage-title"
             eyebrow="On stage"
-            title="Speaking and conferences"
+            title="Public speaking and conferences"
             lede="Conferences, workshops, interviews and leadership sessions."
             aside={<ButtonLink href="/speaking">Invite Kaycee to speak</ButtonLink>}
           />
@@ -170,51 +168,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7 · Insights — ivory */}
-      <section className="section section--ivory" aria-labelledby="insights-title">
-        <div className="container">
-          <SectionHeader
-            id="insights-title"
-            eyebrow="Insights"
-            title="Notes on leadership, communication and language"
-            aside={
-              <TextLink href="/insights" arrow>
-                All insights
-              </TextLink>
-            }
-          />
-          <ArticleFeature articles={sortedArticles()} />
-        </div>
-      </section>
-
-      {/* 8 · BGYCC — sage */}
-      <section className="section section--sage" aria-labelledby="bgycc-title">
-        <div className="container grid bgycc-band">
-          <Reveal variant="mask" className="bgycc-band__media">
-            <Visual visual={portraits.bgycc} sizes="(min-width: 1024px) 33vw, 100vw" />
+      {/* 7 · Meet Kaycee — sage */}
+      <section className="section section--sage" aria-labelledby="meet-title">
+        <div className="container grid meet-band">
+          <Reveal variant="mask" className="meet-band__media">
+            <Visual visual={portraits.meet} sizes="(min-width: 1024px) 33vw, 100vw" />
           </Reveal>
-          <div className="bgycc-band__text stack">
+          <div className="meet-band__text stack">
             <Reveal as="p" className="t-eyebrow">
-              BGYCC School of Leadership
+              Meet Kaycee
             </Reveal>
             <Reveal index={1}>
-              <h2 id="bgycc-title" className="t-h1">
-                Leadership development through <em>classes and events</em>
+              <h2 id="meet-title" className="t-h1">
+                Coach, speaker and <em>teacher</em>
               </h2>
             </Reveal>
             <Reveal index={2} className="stack">
-              <p>
-                <Pending>Kaycee&rsquo;s relationship to BGYCC School of Leadership, and what it offers</Pending>
+              <p className="t-lede">
+                Kaycee founded BGYCC School of Leadership, speaks to audiences across organisations and events, and
+                teaches French through Speak French Fast — with one mission: to develop leaders and equip them.
               </p>
-              <ButtonLink href="/bgycc-school-of-leadership" arrow>
-                Explore BGYCC School of Leadership
-              </ButtonLink>
+              <div className="actions">
+                <ButtonLink href="/about" arrow>
+                  Read Kaycee&rsquo;s story
+                </ButtonLink>
+              </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* 9 · Follow — ivory */}
+      {/* 8 · Follow — ivory */}
       <section className="section section--ivory" aria-labelledby="follow-title">
         <div className="container grid follow">
           <div className="follow__head">
@@ -235,7 +219,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10 · Closing invitation — forest, flows into the footer */}
+      {/* 9 · Closing invitation — forest, flows into the footer */}
       <ClosingInvitation />
     </>
   );

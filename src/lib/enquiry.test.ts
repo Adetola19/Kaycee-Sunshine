@@ -5,9 +5,11 @@ import { enquiryTypeDefs, fieldsFor, isEnquiryType, validateEnquiry, validateFie
 const base = { name: "Ada Okafor", email: "ada@example.org", consent: true };
 
 test("rejects an unknown enquiry type", () => {
-  const result = validateEnquiry({ ...base, type: "booking" });
-  assert.equal(result.ok, false);
-  if (!result.ok) assert.ok(result.errors.type);
+  for (const type of ["booking", "interpretation"]) {
+    const result = validateEnquiry({ ...base, type });
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.type);
+  }
 });
 
 test("requires name, email, consent and type-specific fields", () => {
@@ -44,12 +46,12 @@ test("validates email, date, select options and length", () => {
   assert.ok(validateField(email, "ada@"));
   assert.equal(validateField(email, "ada@example.org"), null);
 
-  const date = enquiryTypeDefs.interpretation.fields.find((f) => f.name === "eventDate")!;
+  const date = enquiryTypeDefs.speaking.fields.find((f) => f.name === "eventDate")!;
   assert.ok(validateField(date, "14/03/2027"));
   assert.equal(validateField(date, ""), null);
 
-  const mode = enquiryTypeDefs.interpretation.fields.find((f) => f.name === "mode")!;
-  assert.ok(validateField(mode, "Telepathic"));
+  const format = enquiryTypeDefs.speaking.fields.find((f) => f.name === "format")!;
+  assert.ok(validateField(format, "Telepathic"));
 
   const name = fieldsFor("general")[0];
   assert.ok(validateField(name, "x".repeat(500)));

@@ -16,7 +16,7 @@ export function ClosingInvitation({
       Develop the <em>leader</em>.
     </>
   ),
-  lede = "Tell Kaycee what you are working towards — coaching, a speaking engagement, interpretation or language learning.",
+  lede = "Tell Kaycee what you are working towards — leadership coaching, a speaking engagement or learning French.",
   cta = { label: "Work with Kaycee", href: "/contact" },
 }: ClosingInvitationProps) {
   return (

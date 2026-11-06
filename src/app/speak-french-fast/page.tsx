@@ -12,9 +12,9 @@ import { SocialChannels } from "@/components/sections/SocialChannels";
 import { ClosingInvitation } from "@/components/sections/ClosingInvitation";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Speak French Fast",
+  title: "SFF · Speak French Fast",
   description:
-    "Speak French Fast — French learning from language educator Kaycee Sunshine. Courses, lessons and how to begin.",
+    "Speak French Fast (SFF) — French learning from language educator Kaycee Sunshine, teaching language as a leadership skill. Courses, lessons and how to begin.",
   path: "/speak-french-fast",
 });
 
@@ -32,14 +32,13 @@ export default function SpeakFrenchFastPage() {
     <>
       <PageHero
         tone="slate"
-        parent={{ label: "Language Education", href: "/language" }}
-        eyebrow="Speak French Fast"
+        eyebrow="SFF · Speak French Fast"
         title={
           <>
             French, with <em>confidence</em>.
           </>
         }
-        lede="Speak French Fast brings Kaycee's language teaching to French learners — practical, spoken French for real conversations."
+        lede="Speak French Fast brings Kaycee's language teaching to French learners — practical, spoken French for real conversations, taught as a leadership skill."
         actions={
           <>
             <ButtonLink href="/contact?type=language" variant="primary" arrow>
@@ -51,7 +50,26 @@ export default function SpeakFrenchFastPage() {
         visual={portraits.speakFrenchFast}
       />
 
-      <section className="section section--ivory tone-slate" aria-labelledby="courses-title">
+      <section className="section section--ivory" aria-labelledby="why-title">
+        <div className="container grid split-head">
+          <div className="split-head__label">
+            <SectionHeader id="why-title" eyebrow="Why language" title="Why language belongs in leadership" size="h2" />
+          </div>
+          <Reveal index={1} className="split-head__body prose">
+            <p className="t-lede">
+              Leaders work through words. Every instruction, vision and difficult conversation depends on being
+              understood.
+            </p>
+            <p>
+              Learning another language widens who you can work with and how well you can listen. It is practical
+              confidence, built one conversation at a time — and it is part of the same mission as Kaycee&rsquo;s
+              coaching and speaking: to develop leaders and equip them.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section section--sage-wash tone-slate" aria-labelledby="courses-title">
         <div className="container">
           <SectionHeader
             id="courses-title"
@@ -72,7 +90,7 @@ export default function SpeakFrenchFastPage() {
         </div>
       </section>
 
-      <section className="section section--sage-wash" aria-labelledby="lessons-title">
+      <section className="section section--ivory" aria-labelledby="lessons-title">
         <div className="container">
           <SectionHeader id="lessons-title" eyebrow="Watch" title="French lessons on video" />
           <VideoGrid
@@ -83,13 +101,13 @@ export default function SpeakFrenchFastPage() {
         </div>
       </section>
 
-      <section className="section section--ivory" aria-labelledby="follow-title">
+      <section className="section section--sage-wash" aria-labelledby="follow-title">
         <div className="container grid follow">
           <div className="follow__head">
             <SectionHeader id="follow-title" eyebrow="Follow" title="Learn a little every day" size="h2" />
           </div>
           <div className="follow__list">
-            <SocialChannels channels={[socials.speakFrenchFast, socials.youtube]} />
+            <SocialChannels channels={[socials.speakFrenchFast, socials.multilingualCoach, socials.youtube]} />
           </div>
         </div>
       </section>

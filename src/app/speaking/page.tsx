@@ -13,9 +13,9 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 import { ClosingInvitation } from "@/components/sections/ClosingInvitation";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Speaking & Conferences",
+  title: "Public Speaking",
   description:
-    "Invite Kaycee Sunshine to speak: keynotes, conference sessions, workshops and leadership sessions for organisations and event organisers.",
+    "Public speaking with Kaycee Sunshine: keynotes, conference sessions, workshops and leadership sessions for organisations and event organisers.",
   path: "/speaking",
 });
 
@@ -41,7 +41,7 @@ export default function SpeakingPage() {
     <>
       <PageHero
         tone="charcoal"
-        eyebrow="Speaking & Conferences"
+        eyebrow="Public Speaking"
         title={
           <>
             A voice for <em>purposeful</em> leadership.
@@ -77,7 +77,7 @@ export default function SpeakingPage() {
           <div className="split-head__label">
             <SectionHeader id="topics-title" eyebrow="Topics" title="What Kaycee speaks about" size="h2" />
           </div>
-          <Reveal index={1} className="split-head__body stack">
+          <Reveal index={1} className="split-head__body">
             <ul className="chip-row" role="list" aria-label="Themes">
               {themes.map((t) => (
                 <li key={t} className="kc-chip">
@@ -85,7 +85,6 @@ export default function SpeakingPage() {
                 </li>
               ))}
             </ul>
-            <Pending block>confirmed talk titles and a one-line summary of each</Pending>
           </Reveal>
         </div>
       </section>
@@ -141,7 +140,7 @@ export default function SpeakingPage() {
       </section>
 
       <ClosingInvitation
-        eyebrow="Speaking enquiries"
+        eyebrow="Public speaking enquiries"
         title={
           <>
             Bring the conversation to <em>your</em> stage.

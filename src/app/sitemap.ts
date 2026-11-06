@@ -1,17 +1,12 @@
 import type { MetadataRoute } from "next";
-import { articles } from "@/content/articles";
 import { siteUrl } from "@/lib/seo";
 
 const routes = [
   "/",
   "/about",
-  "/coaching",
   "/speaking",
-  "/interpretation",
-  "/language",
   "/speak-french-fast",
   "/bgycc-school-of-leadership",
-  "/insights",
   "/media",
   "/contact",
   "/privacy",
@@ -21,10 +16,9 @@ const routes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteUrl();
   if (!base) return [];
-  const articleRoutes = articles.filter((a) => a.body).map((a) => `/insights/${a.slug}`);
-  return [...routes, ...articleRoutes].map((path) => ({
+  return routes.map((path) => ({
     url: new URL(path, base).toString(),
-    changeFrequency: path === "/" || path === "/insights" ? "weekly" : "monthly",
+    changeFrequency: path === "/" ? "weekly" : "monthly",
     priority: path === "/" ? 1 : 0.7,
   }));
 }

@@ -9,11 +9,11 @@
 export const site = {
   name: "Kaycee Sunshine",
   fullName: "Coach Kaycee Sunshine",
-  titles: ["Global Leadership Coach", "International Interpreter", "Language Educator"],
+  titles: ["Global Leadership Coach", "Public Speaker", "Language Educator"],
   tagline: "Leadership that travels beyond borders.",
   mission: "To develop leaders and equip them.",
   description:
-    "Global leadership coach, international interpreter and language educator Kaycee Sunshine develops leaders and equips them to communicate across borders.",
+    "Global leadership coach, public speaker and language educator Kaycee Sunshine develops leaders and equips them to communicate across borders.",
 } as const;
 
 export type SocialKey = "linkedin" | "youtube" | "multilingualCoach" | "speakFrenchFast" | "bgycc";
@@ -72,31 +72,25 @@ export const socials: Record<SocialKey, Social> = {
 
 export const socialList: Social[] = Object.values(socials);
 
-export type NavLink = { label: string; href: string };
+export type NavLink = {
+  label: string;
+  href: string;
+  /** Full name for assistive technology when the visible label is an abbreviation. */
+  expansion?: string;
+};
 
-/** Primary navigation: six links and one CTA (design/components/SiteNav.md). */
+/** Primary navigation: four links and one CTA (design/components/SiteNav.md). */
 export const mainNav: NavLink[] = [
   { label: "About", href: "/about" },
-  { label: "Coaching", href: "/coaching" },
-  { label: "Speaking", href: "/speaking" },
-  { label: "Interpretation", href: "/interpretation" },
-  { label: "Language", href: "/language" },
-  { label: "Insights", href: "/insights" },
-];
-
-/** Between 1024px and 1180px the three service links group under "Work". */
-export const workNav: NavLink[] = [
-  { label: "Leadership & Coaching", href: "/coaching" },
-  { label: "Speaking", href: "/speaking" },
-  { label: "Interpretation", href: "/interpretation" },
+  { label: "BGYCC", href: "/bgycc-school-of-leadership", expansion: "BGYCC School of Leadership" },
+  { label: "Public Speaking", href: "/speaking" },
+  { label: "SFF", href: "/speak-french-fast", expansion: "Speak French Fast" },
 ];
 
 export const navCta: NavLink = { label: "Work with Kaycee", href: "/contact" };
 
-/** Secondary destinations surfaced in the mobile menu and footer. */
+/** Secondary destinations surfaced in the mobile menu. */
 export const secondaryNav: NavLink[] = [
-  { label: "Speak French Fast", href: "/speak-french-fast" },
-  { label: "BGYCC School of Leadership", href: "/bgycc-school-of-leadership" },
   { label: "Videos & media", href: "/media" },
   { label: "Contact", href: "/contact" },
 ];
@@ -105,24 +99,15 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
   {
     title: "Work",
     links: [
-      { label: "Leadership & Coaching", href: "/coaching" },
-      { label: "Speaking", href: "/speaking" },
-      { label: "Interpretation", href: "/interpretation" },
-    ],
-  },
-  {
-    title: "Learn",
-    links: [
-      { label: "Language Education", href: "/language" },
-      { label: "Speak French Fast", href: "/speak-french-fast" },
       { label: "BGYCC School of Leadership", href: "/bgycc-school-of-leadership" },
+      { label: "Public Speaking", href: "/speaking" },
+      { label: "SFF · Speak French Fast", href: "/speak-french-fast" },
     ],
   },
   {
     title: "Explore",
     links: [
       { label: "About Kaycee", href: "/about" },
-      { label: "Insights", href: "/insights" },
       { label: "Videos & media", href: "/media" },
       { label: "Contact", href: "/contact" },
     ],

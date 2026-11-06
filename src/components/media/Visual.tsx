@@ -21,10 +21,18 @@ export function Visual({ visual, sizes, priority, className, ratio, dark }: Visu
   const cls = ["media", className].filter(Boolean).join(" ");
 
   if (visual.image) {
-    const { src, alt, width, height } = visual.image;
+    const { src, alt, width, height, position } = visual.image;
     return (
       <div className={cls} style={{ aspectRatio: aspect }}>
-        <Image src={src} alt={alt} width={width} height={height} sizes={sizes} priority={priority} />
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          sizes={sizes}
+          priority={priority}
+          style={position ? { objectPosition: position } : undefined}
+        />
       </div>
     );
   }

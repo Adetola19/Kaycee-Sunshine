@@ -84,3 +84,21 @@ Media and Contact are reached from the mobile menu, footer, pillars and page CTA
 ## Blockers (owner input)
 
 See `docs/OWNER-INPUTS.md`. None block the build; each gap is visibly marked on the site.
+
+## Revision — 6 November 2026 (owner feedback)
+
+- Menu is now **About · BGYCC · Public Speaking · SFF** plus "Work with Kaycee"; the "Work"
+  dropdown was removed (four links fit from 1024px).
+- **Coaching merged into BGYCC** (`/bgycc-school-of-leadership`, forest ground) and **Language
+  Education merged into SFF** (`/speak-french-fast`, slate ground). `/coaching` and `/language`
+  redirect permanently.
+- **Interpretation removed everywhere** (page, title, pillar, form option). Kaycee's titles are now
+  Global Leadership Coach · Public Speaker · Language Educator ("Public Speaker" chosen to match the
+  Public Speaking rename — owner may reword).
+- **Insights removed** (journal, article template, homepage section, article code).
+- Kaycee is stated as **founder of BGYCC School of Leadership**, confirmed by the owner.
+- Owner-supplied photos added under `public/images/` (home hero, About, Public Speaking, BGYCC,
+  "Meet Kaycee" band, gallery). Three of them (navy, charcoal and grey portraits) carry Gemini's
+  ✦ mark, indicating AI generation or editing; the standard 4:5 crop falls above it.
+- Bug fixed: the image-unmask reveal clipped the observed element itself, which IntersectionObserver
+  treats as invisible, so those reveals never fired for visitors. The clip now applies to children.

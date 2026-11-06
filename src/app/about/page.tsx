@@ -15,34 +15,28 @@ import { ClosingInvitation } from "@/components/sections/ClosingInvitation";
 export const metadata: Metadata = pageMetadata({
   title: "About Kaycee",
   description:
-    "Kaycee Sunshine is a global leadership coach, international interpreter and language educator with a mission to develop leaders and equip them.",
+    "Kaycee Sunshine is a global leadership coach, public speaker and language educator, and the founder of BGYCC School of Leadership.",
   path: "/about",
 });
 
 const disciplines = [
   {
-    title: "Leadership coaching",
-    text: "Helping leaders think clearly, decide well and grow the capacity to carry responsibility for others.",
-    href: "/coaching",
-    link: "Leadership & Coaching",
+    title: "BGYCC School of Leadership",
+    text: "Kaycee founded BGYCC School of Leadership to help leaders think clearly, decide well and grow the capacity to carry responsibility for others — through coaching, classes and events.",
+    href: "/bgycc-school-of-leadership",
+    link: "BGYCC",
   },
   {
-    title: "Speaking and conferences",
+    title: "Public speaking",
     text: "Keynotes, workshops and leadership sessions that give audiences ideas they can act on.",
     href: "/speaking",
-    link: "Speaking",
-  },
-  {
-    title: "International interpretation",
-    text: "Carrying meaning faithfully between languages, so people can understand one another.",
-    href: "/interpretation",
-    link: "Interpretation",
+    link: "Public Speaking",
   },
   {
     title: "Language education",
-    text: "Teaching language as a leadership skill, including through Speak French Fast.",
-    href: "/language",
-    link: "Language Education",
+    text: "Teaching language as a leadership skill through SFF · Speak French Fast.",
+    href: "/speak-french-fast",
+    link: "SFF",
   },
 ];
 
@@ -56,7 +50,7 @@ export default function AboutPage() {
             A practice between leadership and <em>language</em>.
           </>
         }
-        lede={`${site.fullName} is a global leadership coach, international interpreter and language educator, with a mission to develop leaders and equip them.`}
+        lede={`${site.fullName} is a global leadership coach, public speaker and language educator, and the founder of BGYCC School of Leadership — with a mission to develop leaders and equip them.`}
         actions={
           <ButtonLink href="/contact" variant="primary" arrow>
             Work with Kaycee
@@ -89,8 +83,8 @@ export default function AboutPage() {
 
       <section className="section section--ivory" aria-labelledby="disciplines-title">
         <div className="container">
-          <SectionHeader id="disciplines-title" eyebrow="The work" title="One mission, several disciplines" />
-          <ol className="num-list num-list--2" role="list">
+          <SectionHeader id="disciplines-title" eyebrow="The work" title="One mission, three disciplines" />
+          <ol className="num-list num-list--3" role="list">
             {disciplines.map((d, i) => (
               <Reveal as="li" key={d.href} index={i}>
                 <div className="stack stack-sm">

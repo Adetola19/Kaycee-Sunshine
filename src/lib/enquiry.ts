@@ -4,7 +4,7 @@
  * unit-tested with `node --test`.
  */
 
-export const enquiryTypes = ["coaching", "speaking", "interpretation", "language", "partnership", "general"] as const;
+export const enquiryTypes = ["coaching", "speaking", "language", "partnership", "general"] as const;
 export type EnquiryType = (typeof enquiryTypes)[number];
 
 export type FieldKind = "text" | "email" | "date" | "textarea" | "select";
@@ -42,7 +42,7 @@ export const enquiryTypeDefs: Record<EnquiryType, EnquiryTypeDef> = {
   coaching: {
     type: "coaching",
     label: "Leadership coaching",
-    summary: "For yourself or your organisation",
+    summary: "Through BGYCC School of Leadership",
     fields: [
       { name: "clientType", label: "Who is the coaching for?", kind: "select", required: true, options: ["For myself", "For my organisation or team"], maxLength: 60, half: true },
       { name: "organisation", label: "Organisation", kind: "text", required: false, autoComplete: "organization", maxLength: 160, half: true },
@@ -51,7 +51,7 @@ export const enquiryTypeDefs: Record<EnquiryType, EnquiryTypeDef> = {
   },
   speaking: {
     type: "speaking",
-    label: "Speaking or conference",
+    label: "Public speaking",
     summary: "Keynotes, workshops, leadership sessions",
     fields: [
       { name: "organisation", label: "Organisation", kind: "text", required: true, autoComplete: "organization", maxLength: 160, half: true },
@@ -63,24 +63,12 @@ export const enquiryTypeDefs: Record<EnquiryType, EnquiryTypeDef> = {
       { name: "message", label: "Tell Kaycee about the event", kind: "textarea", required: true, maxLength: 3000, requiredMessage: "Tell Kaycee a little about the event." },
     ],
   },
-  interpretation: {
-    type: "interpretation",
-    label: "Interpretation",
-    summary: "Languages, setting and date",
-    fields: [
-      { name: "languagePair", label: "Languages required", kind: "text", required: true, maxLength: 160, half: true, help: "For example, from one language into another.", requiredMessage: "Enter the languages you need." },
-      { name: "mode", label: "Mode", kind: "select", required: true, options: ["Simultaneous", "Consecutive", NOT_SURE], maxLength: 60, half: true, help: "Kaycee will confirm which formats suit your setting." },
-      { name: "eventDate", label: "Date", kind: "date", required: false, maxLength: 10, half: true },
-      { name: "setting", label: "Setting", kind: "text", required: true, maxLength: 200, half: true, help: "The occasion and subject matter.", requiredMessage: "Describe the setting, for example a conference or meeting." },
-      { name: "message", label: "Anything else Kaycee should know", kind: "textarea", required: false, maxLength: 3000 },
-    ],
-  },
   language: {
     type: "language",
-    label: "Language learning",
-    summary: "Speak French Fast and lessons",
+    label: "Speak French Fast",
+    summary: "Learning French with SFF",
     fields: [
-      { name: "courseInterest", label: "What are you interested in?", kind: "select", required: true, options: ["Speak French Fast", "Other language learning", NOT_SURE], maxLength: 60, half: true },
+      { name: "courseInterest", label: "What are you interested in?", kind: "select", required: true, options: ["French with Speak French Fast", NOT_SURE], maxLength: 60, half: true },
       { name: "level", label: "Current level", kind: "select", required: true, options: ["Beginner", "Intermediate", "Advanced", NOT_SURE], maxLength: 60, half: true },
       { name: "message", label: "Your goals", kind: "textarea", required: false, maxLength: 3000 },
     ],
@@ -98,9 +86,9 @@ export const enquiryTypeDefs: Record<EnquiryType, EnquiryTypeDef> = {
   general: {
     type: "general",
     label: "General enquiry",
-    summary: "BGYCC School of Leadership and anything else",
+    summary: "BGYCC classes and anything else",
     fields: [
-      { name: "topic", label: "Topic", kind: "select", required: true, options: ["BGYCC School of Leadership", "General question", "Other"], maxLength: 60 },
+      { name: "topic", label: "Topic", kind: "select", required: true, options: ["BGYCC classes and events", "General question", "Other"], maxLength: 60 },
       { name: "message", label: "Message", kind: "textarea", required: true, maxLength: 3000, requiredMessage: "Write a short message." },
     ],
   },
